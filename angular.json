@@ -78,6 +78,10 @@
               "browserTarget": "sanaaFront:build:development"
             }
           },
+          "options": {
+            "browserTarget": "sanaaFront:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
