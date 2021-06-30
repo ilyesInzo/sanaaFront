@@ -24,43 +24,31 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-
     console.log('submit changes')
-
     if (this.loginForm.valid) {
       this.loginService.login(this.loginForm.controls.login.value, this.loginForm.controls.password.value)
         .subscribe((data) => {
           console.log(data);
         },
-        (error) => {
-          console.log("we got error");
-          
-          console.log(error);
-          
-        }
-        
+          (error) => {
+            console.log("we got error");
+            console.log(error);
+          }
         )
     }
-
   }
 
-
-  test(){
-
+  /*test() {
     this.loginService.test().subscribe((data) => {
       console.log("work");
       console.log(data);
     },
       (error) => {
         console.log("we got error");
-
         console.log(error);
-
       }
-
     )
-
-}
+  }*/
 
 
 }
